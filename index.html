@@ -79,9 +79,17 @@ nav a{
 .hero-text{
   position:relative;
   z-index:3;
-  max-width:760px;
 }
-
+.hero-lantern{
+  position:absolute;
+  right:3vw;
+  top:50%;
+  transform:translateY(-50%);
+  width:min(720px,52vw);
+  opacity:.9;
+  z-index:1;
+  filter:brightness(.9) contrast(1.08) saturate(1.05);
+}
 h1{
   margin:0 0 28px;
   font-size:clamp(50px,7vw,92px);
@@ -111,15 +119,15 @@ h1{
   font-size:14px;
 }
 
-.lantern-art{
+.hero-lantern{
   position:absolute;
-  right:8vw;
+  right:3vw;
   top:50%;
   transform:translateY(-50%);
-  width:min(470px,42vw);
-  z-index:2;
-  opacity:.88;
-  filter:drop-shadow(0 0 65px rgba(217,164,65,.45));
+  width:min(720px,52vw);
+  opacity:.9;
+  z-index:1;
+  filter:brightness(.9) contrast(1.08) saturate(1.05);
 }
 
 section{
@@ -291,44 +299,7 @@ footer{
     <a class="button" href="#contact">Get in Touch</a>
   </div>
 
-  <svg class="lantern-art" viewBox="0 0 420 560" xmlns="http://www.w3.org/2000/svg">
-    <defs>
-      <radialGradient id="lampGlow" cx="50%" cy="55%" r="50%">
-        <stop offset="0%" stop-color="#FFE7A0" stop-opacity="1"/>
-        <stop offset="35%" stop-color="#D9A441" stop-opacity=".75"/>
-        <stop offset="72%" stop-color="#D9A441" stop-opacity=".18"/>
-        <stop offset="100%" stop-color="#D9A441" stop-opacity="0"/>
-      </radialGradient>
-      <linearGradient id="brass" x1="0" x2="1">
-        <stop offset="0%" stop-color="#6f3b16"/>
-        <stop offset="35%" stop-color="#D9A441"/>
-        <stop offset="70%" stop-color="#8b4a1c"/>
-        <stop offset="100%" stop-color="#F0B55A"/>
-      </linearGradient>
-    </defs>
-
-    <ellipse cx="210" cy="305" rx="170" ry="210" fill="url(#lampGlow)"/>
-
-    <path d="M150 95 C150 35 270 35 270 95" fill="none" stroke="url(#brass)" stroke-width="16" stroke-linecap="round"/>
-    <path d="M128 112 H292" stroke="url(#brass)" stroke-width="18" stroke-linecap="round"/>
-    <path d="M118 132 H302 L330 485 H90 Z" fill="rgba(35,12,4,.22)" stroke="url(#brass)" stroke-width="16" stroke-linejoin="round"/>
-
-    <path d="M145 160 V455" stroke="#E8BC62" stroke-width="9" opacity=".85"/>
-    <path d="M210 145 V485" stroke="#E8BC62" stroke-width="9" opacity=".85"/>
-    <path d="M275 160 V455" stroke="#E8BC62" stroke-width="9" opacity=".85"/>
-
-    <path d="M118 132 L90 485" stroke="#F8F2EA" stroke-width="4" opacity=".25"/>
-    <path d="M302 132 L330 485" stroke="#F8F2EA" stroke-width="4" opacity=".25"/>
-
-    <ellipse cx="210" cy="310" rx="70" ry="92" fill="#F0B55A" opacity=".82"/>
-    <ellipse cx="210" cy="325" rx="115" ry="150" fill="none" stroke="#D9A441" stroke-width="8" opacity=".5"/>
-
-    <path d="M135 500 H285" stroke="url(#brass)" stroke-width="20" stroke-linecap="round"/>
-    <path d="M165 525 H255" stroke="url(#brass)" stroke-width="14" stroke-linecap="round"/>
-
-    <rect x="145" y="112" width="130" height="34" rx="10" fill="rgba(217,164,65,.28)" stroke="#D9A441" stroke-width="6"/>
-    <circle cx="210" cy="129" r="10" fill="#F0B55A"/>
-  </svg>
+  <img class="hero-lantern" src="lantern-hero-oldschool.png" alt="">
 </section>
 
 <section id="mission">
