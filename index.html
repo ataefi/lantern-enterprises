@@ -54,9 +54,9 @@
     }
 
     .lantern-icon {
-      width: 34px;
-      height: 46px;
-    }
+  font-size: 34px;
+  filter: sepia(1) saturate(2) hue-rotate(345deg) drop-shadow(0 0 10px rgba(217,164,65,.65));
+}
 
     nav a {
       color: var(--ivory);
@@ -110,10 +110,12 @@
     }
 
     .large-lantern {
-      width: min(420px, 80vw);
-      filter: drop-shadow(0 0 45px rgba(217,164,65,.55));
-    }
-
+  width: min(460px, 85vw);
+  border-radius: 22px;
+  opacity: .92;
+  box-shadow: 0 0 70px rgba(217,164,65,.45);
+  filter: sepia(.45) saturate(1.2) brightness(.85);
+}
     section {
       padding: 70px 7vw;
     }
@@ -250,7 +252,7 @@
 <body>
   <header>
     <div class="brand">
-      <svg class="lantern-icon" viewBox="0 0 80 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+     <span class="lantern-icon">🕯️</span>
         <path d="M25 22C25 10 55 10 55 22" stroke="#D9A441" stroke-width="5" stroke-linecap="round"/>
         <path d="M20 28H60L66 92H14L20 28Z" stroke="#D9A441" stroke-width="5" stroke-linejoin="round"/>
         <path d="M30 40V82M50 40V82" stroke="#D9A441" stroke-width="3"/>
@@ -280,23 +282,12 @@
       </div>
 
       <div class="lantern-visual">
-        <svg class="large-lantern" viewBox="0 0 300 420" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <radialGradient id="glow" cx="50%" cy="55%" r="50%">
-              <stop offset="0%" stop-color="#F0B55A" stop-opacity="1"/>
-              <stop offset="45%" stop-color="#D9A441" stop-opacity=".45"/>
-              <stop offset="100%" stop-color="#D9A441" stop-opacity="0"/>
-            </radialGradient>
-          </defs>
-          <circle cx="150" cy="235" r="120" fill="url(#glow)"/>
-          <path d="M105 85C105 35 195 35 195 85" stroke="#D9A441" stroke-width="10" stroke-linecap="round"/>
-          <path d="M82 105H218L238 365H62L82 105Z" stroke="#D9A441" stroke-width="12" stroke-linejoin="round"/>
-          <path d="M104 145V335M150 125V360M196 145V335" stroke="#D9A441" stroke-width="7" opacity=".9"/>
-          <path d="M82 105L62 365M218 105L238 365" stroke="#F8F2EA" stroke-width="4" opacity=".35"/>
-          <circle cx="150" cy="235" r="48" fill="#F0B55A" opacity=".9"/>
-          <path d="M105 382H195" stroke="#D9A441" stroke-width="12" stroke-linecap="round"/>
-        </svg>
-      </div>
+  <img
+    class="large-lantern"
+    src="https://images.unsplash.com/photo-1516211697506-8360dbcfe9a4?auto=format&fit=crop&w=900&q=80"
+    alt="A glowing vintage lantern"
+  />
+</div>
     </section>
 
     <section id="mission">
