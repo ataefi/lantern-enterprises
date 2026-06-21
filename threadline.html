@@ -1,34 +1,181 @@
-<!doctype html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><title>Threadline Intelligence™ | Lantern Enterprises</title><style>
-:root{--gold:#D9A441;--amber:#F0B55A;--sunset:#D96B2B;--ivory:#F8F2EA;--cream:#F0D6A2;--dark:#090201;--brown:#210904}
-*{box-sizing:border-box}html{scroll-behavior:smooth}
-body{margin:0;font-family:Georgia,"Times New Roman",serif;color:var(--ivory);background:radial-gradient(circle at 75% 4%,rgba(217,107,43,.26),transparent 22%),linear-gradient(135deg,#070201 0%,#1b0703 46%,#351106 100%)}
-a{color:inherit}
-header{min-height:92px;display:flex;justify-content:space-between;align-items:center;padding:0 7vw;background:rgba(15,4,1,.88);border-bottom:1px solid rgba(217,164,65,.22);position:sticky;top:0;z-index:50;backdrop-filter:blur(10px)}
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Threadline Intelligence | Lantern Enterprises</title>
+<style>
+:root{--gold:#D9A441;--sunset:#D96B2B;--ivory:#F8F2EA;--cream:#F0D6A2;}
+*{box-sizing:border-box}
+body{margin:0;font-family:Georgia,"Times New Roman",serif;color:var(--ivory);background:linear-gradient(135deg,#070201,#1b0703 50%,#351106);}
+header{min-height:92px;display:flex;justify-content:space-between;align-items:center;padding:0 7vw;background:rgba(15,4,1,.9);border-bottom:1px solid rgba(217,164,65,.22);}
 .logo{color:var(--gold);letter-spacing:5px;text-transform:uppercase;font-weight:bold;font-size:18px;text-decoration:none}
 nav a{color:var(--ivory);text-decoration:none;margin-left:24px;font-weight:bold;font-size:15px}
-.hero{min-height:82vh;position:relative;display:flex;align-items:center;padding:90px 7vw;overflow:hidden;background:linear-gradient(90deg,rgba(5,1,0,1) 0%,rgba(9,2,1,.98) 33%,rgba(16,5,2,.78) 48%,rgba(23,7,2,.25) 72%,rgba(9,2,1,.72) 100%),url("../assets/lantern-hero-oldschool.png");background-size:cover;background-position:center right;background-repeat:no-repeat}
-.hero::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 76% 42%,rgba(217,164,65,.18),transparent 20%),linear-gradient(180deg,transparent 0%,rgba(8,2,0,.3) 82%,rgba(8,2,0,1) 100%);pointer-events:none}
-.hero-text{position:relative;z-index:2;max-width:800px}
-.brand-mark{display:inline-flex;align-items:center;gap:14px;color:var(--gold);letter-spacing:3px;text-transform:uppercase;font-size:13px;margin-bottom:28px}.lantern-mini{width:34px;height:42px}
-h1{margin:0 0 28px;font-size:clamp(52px,7vw,96px);line-height:1.02;color:var(--gold);font-weight:400;text-shadow:0 0 20px rgba(217,164,65,.35)}
-.hero p{font-size:22px;line-height:1.6;color:var(--cream);max-width:720px;font-weight:bold}
-.button{display:inline-block;margin-top:24px;border:1px solid var(--gold);color:var(--gold);padding:15px 30px;text-decoration:none;text-transform:uppercase;letter-spacing:2px;font-size:14px;background:rgba(0,0,0,.2)}
-.button:hover,.card:hover,.principle:hover,.contact-box:hover{border-color:var(--sunset);box-shadow:0 0 30px rgba(217,107,43,.22)}
-section{padding:78px 7vw;background:linear-gradient(180deg,#180602,#0b0201)}
-h2{text-align:center;color:var(--gold);font-size:clamp(36px,4vw,58px);font-weight:400;margin:0 0 35px}
-h3{color:var(--gold);font-weight:400}.content{max-width:1080px;margin:auto;color:var(--cream);font-size:20px;line-height:1.76}
-.about-callout{max-width:1080px;margin:38px auto 0;border-left:4px solid var(--sunset);padding:24px 28px;background:rgba(0,0,0,.22);color:var(--cream);font-size:19px;line-height:1.7}
-.principles,.services,.contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px;margin-top:35px}
-.principle,.card,.contact-box{border:1px solid rgba(217,164,65,.32);background:rgba(0,0,0,.22);padding:26px;color:var(--cream);text-decoration:none;display:block}
-.principle{color:var(--gold);text-align:center;font-size:19px;font-weight:bold;min-height:96px}.card{min-height:360px}
-.card h3,.contact-box h3{font-size:26px;margin-top:0}.card p,.card li,.contact-box p{color:var(--cream);font-size:17px;line-height:1.65}
-.note{color:#d7b56d;font-size:14px}.learn{color:var(--gold);margin-top:18px;display:inline-block;text-decoration:none;letter-spacing:1px}
-.threadline{background:radial-gradient(circle at 74% 12%,rgba(217,107,43,.2),transparent 24%),rgba(0,0,0,.28);border-top:1px solid rgba(217,164,65,.2);border-bottom:1px solid rgba(217,164,65,.2)}
-.page-hero{padding:100px 7vw 70px;background:radial-gradient(circle at 72% 12%,rgba(217,107,43,.24),transparent 24%),linear-gradient(135deg,#070201,#210904 70%,#351106)}
-.page-hero h1{max-width:1000px}.page-hero p{font-size:22px;line-height:1.65;color:var(--cream);max-width:900px;font-weight:bold}
-.detail{max-width:1080px;margin:auto;color:var(--cream);font-size:19px;line-height:1.75}.detail ul{padding-left:25px}.detail li{margin:9px 0}
-.panel{border:1px solid rgba(217,164,65,.26);background:rgba(0,0,0,.22);padding:30px;margin:26px 0}.email-link{color:var(--gold);font-weight:bold;text-decoration:none}
+section{padding:75px 7vw}
+.hero{background:radial-gradient(circle at 75% 18%,rgba(217,107,43,.25),transparent 25%),linear-gradient(135deg,#090201,#210904);}
+h1{font-size:clamp(52px,7vw,92px);line-height:1.02;color:var(--gold);font-weight:400;margin:0 0 22px;text-shadow:0 0 20px rgba(217,164,65,.3)}
+h2{color:var(--gold);font-size:38px;font-weight:400;margin-top:50px}
+h3{color:var(--gold);font-size:28px;font-weight:400;margin-top:34px}
+p,li{color:var(--cream);font-size:19px;line-height:1.75}
+.content{max-width:1050px;margin:auto}
+.callout{border-left:4px solid var(--sunset);background:rgba(0,0,0,.22);padding:22px 28px;margin:32px 0;color:var(--gold);font-size:21px}
+.card{border:1px solid rgba(217,164,65,.32);background:rgba(0,0,0,.22);padding:28px;margin:24px 0}
+.button{display:inline-block;margin-top:24px;border:1px solid var(--gold);color:var(--gold);padding:15px 30px;text-decoration:none;text-transform:uppercase;letter-spacing:2px;font-size:14px}
 footer{text-align:center;padding:55px 7vw;color:var(--gold);letter-spacing:4px;text-transform:uppercase;border-top:1px solid rgba(217,164,65,.18);background:#070201}
-.footer-small{color:#d7b56d;font-size:12px;margin-top:16px;letter-spacing:2px}
-@media(max-width:900px){header{height:auto;display:block;text-align:center;padding:24px}nav{margin-top:18px}nav a{display:inline-block;margin:8px 10px}.hero{text-align:center;background-position:center}.hero-text{margin:auto}h1{font-size:46px}}
-</style></head><body><header><a class="logo" href="../index.html">Lantern Enterprises</a><nav><a href="../index.html#mission">Mission</a><a href="../index.html#overview">Overview</a><a href="../index.html#about">Who We Are</a><a href="../index.html#services">Services</a><a href="../pages/threadline.html">Threadline</a><a href="../index.html#contact">Contact</a></nav></header><main><section class="page-hero"><h1>Threadline Intelligence™</h1><p>AI-powered retrieval, indexing, and operational intelligence for fragmented information.</p></section><section><div class="detail"><div class="panel"><p>Threadline Intelligence is designed for people and organizations overwhelmed by fragmented information across files, emails, transcripts, images, documents, communications, cloud storage, drives, and digital systems.</p><p>The vision is simple: help people find what matters, understand what connects, and act with greater confidence.</p><ul><li>File and document indexing</li><li>Semantic search</li><li>Metadata extraction</li><li>Timeline association</li><li>Contextual retrieval</li><li>Operational memory systems</li></ul><p><a class="email-link" href="mailto:threadlineintelligence@gmail.com?subject=Threadline%20Intelligence%20Inquiry">Contact Threadline Intelligence →</a></p></div></div></section></main><footer>Lantern Enterprises<div class="footer-small">Clarity over confusion • Service over ego • Structure over chaos • Intelligence with humanity • Trust through responsiveness</div></footer></body></html>
+</style>
+</head>
+
+<body>
+
+<header>
+  <a class="logo" href="index.html">Lantern Enterprises</a>
+  <nav>
+    <a href="index.html#mission">Mission</a>
+    <a href="index.html#services">Services</a>
+    <a href="index.html#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="content">
+    <h1>Threadline Intelligence™</h1>
+    <p><em>An operational memory and knowledge intelligence platform designed to help people find what matters, understand what connects, and act with confidence.</em></p>
+  </div>
+</section>
+
+<section>
+<div class="content">
+
+<h2>About Threadline Intelligence™</h2>
+
+<p>Threadline Intelligence is being designed for people and organizations overwhelmed by fragmented information across files, emails, transcripts, images, documents, recordings, drives, cloud platforms, communications, and digital systems.</p>
+
+<p>The modern world creates more information than most people can realistically organize, remember, search, or use. Critical knowledge gets buried. Important records become scattered. Context disappears. People waste hours looking for things they know exist but cannot find.</p>
+
+<p>Threadline Intelligence is intended to solve that problem by transforming disconnected information into structured, searchable, contextual knowledge.</p>
+
+<div class="callout">
+Find what matters. Understand what connects. Act with confidence.
+</div>
+
+<h2>What Threadline Is Being Built To Do</h2>
+
+<div class="card">
+<h3>Intelligent Retrieval</h3>
+<p>Threadline is designed to help users search across fragmented information sources using natural language, not just filenames or folder memory.</p>
+<ul>
+<li>File search</li>
+<li>Document search</li>
+<li>Email and communication retrieval</li>
+<li>Transcript search</li>
+<li>Image and media reference search</li>
+<li>Cross-source retrieval</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Contextual Understanding</h3>
+<p>Threadline is not intended to simply find files. It is designed to help users understand what the information means, how it connects, and why it may matter.</p>
+<ul>
+<li>Summaries</li>
+<li>Topic extraction</li>
+<li>People and entity recognition</li>
+<li>Timeline association</li>
+<li>Project/context grouping</li>
+<li>Relationship mapping</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Operational Memory</h3>
+<p>Threadline is being built as a memory layer for individuals, professionals, teams, and organizations that need continuity across time, projects, people, and systems.</p>
+<ul>
+<li>Institutional memory support</li>
+<li>Project history reconstruction</li>
+<li>Communication chains</li>
+<li>Document lineage</li>
+<li>Decision history</li>
+<li>Knowledge preservation</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Analysis & Insight</h3>
+<p>The long-term vision is for Threadline to identify patterns, risks, gaps, inconsistencies, opportunities, and action items across information-heavy environments.</p>
+<ul>
+<li>Risk identification</li>
+<li>Gap detection</li>
+<li>Inconsistency spotting</li>
+<li>Opportunity identification</li>
+<li>Action recommendations</li>
+<li>Decision support summaries</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Legal, Research & Professional Use Cases</h3>
+<p>Threadline is especially suited for environments where records, communications, timelines, and context matter.</p>
+<ul>
+<li>Litigation support</li>
+<li>Discovery organization</li>
+<li>Medical record review</li>
+<li>Research projects</li>
+<li>Executive knowledge management</li>
+<li>Family office information systems</li>
+<li>Creative archives</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Security-Conscious Deployment</h3>
+<p>Threadline is intended to support multiple deployment models depending on client need, sensitivity, and scale.</p>
+<ul>
+<li>Cloud-hosted model</li>
+<li>Private cloud model</li>
+<li>On-premise enterprise deployment</li>
+<li>Remote maintenance and support options</li>
+<li>Permission-aware environments</li>
+<li>Security-first architecture planning</li>
+</ul>
+</div>
+
+<h2>Potential Engagement Models</h2>
+
+<div class="card">
+<h3>Personal Knowledge Pilot</h3>
+<p>For individuals with scattered files, records, emails, images, and communications who need help creating an intelligent personal knowledge environment.</p>
+</div>
+
+<div class="card">
+<h3>Professional Practice Pilot</h3>
+<p>For attorneys, consultants, researchers, writers, and professionals who manage information-heavy work and need structured retrieval and organizational memory.</p>
+</div>
+
+<div class="card">
+<h3>Team Knowledge System</h3>
+<p>For small teams that need shared search, project memory, communications context, and organized knowledge across multiple users.</p>
+</div>
+
+<div class="card">
+<h3>Enterprise or Private Deployment</h3>
+<p>For organizations, family offices, legal environments, and sensitive data contexts that require customized deployment, permissions, security, and maintenance planning.</p>
+</div>
+
+<div class="card">
+<h3>Custom Threadline Consultation</h3>
+<p>For clients with unique information challenges, legacy archives, scattered systems, sensitive records, or complex retrieval needs that require a customized roadmap.</p>
+</div>
+
+<h2>Get in Touch</h2>
+
+<p>If you are interested in Threadline Intelligence, a pilot use case, a custom deployment conversation, or information-retrieval strategy, contact Threadline Intelligence.</p>
+
+<a class="button" href="mailto:threadlineintelligence@gmail.com?subject=Threadline%20Intelligence%20Inquiry">Contact Threadline Intelligence</a>
+
+</div>
+</section>
+
+<footer>Threadline Intelligence • Lantern Enterprises</footer>
+
+</body>
+</html>
