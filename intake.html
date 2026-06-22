@@ -13,134 +13,125 @@ header{min-height:92px;display:flex;justify-content:space-between;align-items:ce
 nav a{color:var(--ivory);text-decoration:none;margin-left:24px;font-weight:bold;font-size:15px}
 section{padding:75px 7vw}
 .hero{background:radial-gradient(circle at 75% 18%,rgba(217,107,43,.25),transparent 25%),linear-gradient(135deg,#090201,#210904);}
-h1{font-size:clamp(52px,7vw,92px);line-height:1.02;color:var(--gold);font-weight:400;margin:0 0 22px;text-shadow:0 0 20px rgba(217,164,65,.3)}
-h2{color:var(--gold);font-size:38px;font-weight:400;margin-top:50px}
-h3{color:var(--gold);font-size:28px;font-weight:400;margin-top:34px}
-p,li{color:var(--cream);font-size:19px;line-height:1.75}
-.content{max-width:1050px;margin:auto}
-.card{border:1px solid rgba(217,164,65,.32);background:rgba(0,0,0,.22);padding:28px;margin:24px 0}
-.button{display:inline-block;margin-top:18px;border:1px solid var(--gold);color:var(--gold);padding:15px 30px;text-decoration:none;text-transform:uppercase;letter-spacing:2px;font-size:14px}
+h1{font-size:clamp(52px,7vw,92px);line-height:1.02;color:var(--gold);font-weight:400;margin:0 0 22px}
+h2{color:var(--gold);font-size:38px;font-weight:400}
+p,label{color:var(--cream);font-size:18px;line-height:1.7}
+.content{max-width:950px;margin:auto}
+form{border:1px solid rgba(217,164,65,.32);background:rgba(0,0,0,.25);padding:34px;margin-top:35px}
+label{display:block;margin-top:20px;color:var(--gold)}
+input,select,textarea{width:100%;margin-top:8px;padding:14px;background:#120503;border:1px solid rgba(217,164,65,.35);color:var(--ivory);font-size:16px}
+textarea{min-height:150px}
+button{margin-top:28px;border:1px solid var(--gold);background:transparent;color:var(--gold);padding:15px 30px;text-transform:uppercase;letter-spacing:2px;cursor:pointer}
+.note{font-size:15px;color:#d7b56d}
 footer{text-align:center;padding:55px 7vw;color:var(--gold);letter-spacing:4px;text-transform:uppercase;border-top:1px solid rgba(217,164,65,.18);background:#070201}
 </style>
 </head>
 <body>
 
 <header>
-  <a class="logo" href="index.html">Lantern Enterprises</a>
-  <nav>
-    <a href="index.html#services">Services</a>
-    <a href="working-with-lantern.html" target="_blank">Process</a>
-    <a href="pricing-models.html" target="_blank">Pricing</a>
-    <a href="index.html#contact">Contact</a>
-  </nav>
+<a class="logo" href="index.html">Lantern Enterprises</a>
+<nav>
+<a href="index.html#services">Services</a>
+<a href="working-with-lantern.html" target="_blank">Process</a>
+<a href="pricing-models.html" target="_blank">Pricing</a>
+<a href="faq.html" target="_blank">FAQ</a>
+<a href="index.html#contact">Contact</a>
+</nav>
 </header>
 
 <section class="hero">
-  <div class="content">
-    <h1>Client Intake</h1>
-    <p><em>Help us understand what you need so we can route your inquiry to the right Lantern division.</em></p>
-  </div>
+<div class="content">
+<h1>Client Intake</h1>
+<p><em>Tell us what you need. We will review your inquiry and route it to the right Lantern division.</em></p>
+</div>
 </section>
 
 <section>
 <div class="content">
 
-<p>Choose the area that best fits your need. If you are unsure, start with General Intake.</p>
+<h2>Start Here</h2>
+<p>Complete the form below. For sensitive documents, please do not upload or paste confidential materials here. We will provide next steps after reviewing your inquiry.</p>
 
-<div class="card">
-<h3>General Intake</h3>
-<p>For new inquiries, unclear needs, multi-division projects, or custom scopes.</p>
-<a class="button" href="mailto:lanternenterprisesinfo@gmail.com?subject=General%20Intake%20Request">Start General Intake</a>
-</div>
+<form action="PASTE-YOUR-FORM-ENDPOINT-HERE" method="POST">
 
-<div class="card">
-<h3>Lantern Advisory Intake</h3>
-<p>For discovery support, litigation support, records organization, chronologies, meet-and-confer support, deposition support, or trial-preparation support.</p>
-<ul>
-<li>Matter type</li>
-<li>Current stage</li>
-<li>Attorney involvement</li>
-<li>Document volume</li>
-<li>Deadlines</li>
-<li>Requested deliverables</li>
-</ul>
-<a class="button" href="mailto:lanternenterpriseslegal@gmail.com?subject=Lantern%20Advisory%20Intake">Start Advisory Intake</a>
-</div>
+<label>Your Name *</label>
+<input type="text" name="name" required>
 
-<div class="card">
-<h3>Lantern Systems Intake</h3>
-<p>For executive technology support, family office support, AV/VC, collaboration systems, telephony, network, cybersecurity coordination, or AI workflow integration.</p>
-<ul>
-<li>Environment type</li>
-<li>Remote or onsite needs</li>
-<li>Systems involved</li>
-<li>Urgency</li>
-<li>Security requirements</li>
-<li>Support expectations</li>
-</ul>
-<a class="button" href="mailto:lanternenterprisestechnology@gmail.com?subject=Lantern%20Systems%20Intake">Start Systems Intake</a>
-</div>
+<label>Email *</label>
+<input type="email" name="email" required>
 
-<div class="card">
-<h3>Lantern Research Intake</h3>
-<p>For research briefs, records review, chronologies, due diligence, market intelligence, executive summaries, or information synthesis.</p>
-<ul>
-<li>Research question</li>
-<li>Known sources</li>
-<li>Desired deliverable</li>
-<li>Timeline</li>
-<li>Confidentiality needs</li>
-<li>Decision or outcome supported</li>
-</ul>
-<a class="button" href="mailto:lanternenterprisesinfo@gmail.com?subject=Lantern%20Research%20Intake">Start Research Intake</a>
-</div>
+<label>Phone</label>
+<input type="tel" name="phone">
 
-<div class="card">
-<h3>Freedom Studio Intake</h3>
-<p>For writing, voice, ghostwriting, thought leadership, founder stories, website copy, speeches, essays, or story-to-video development.</p>
-<ul>
-<li>Desired deliverable</li>
-<li>Audience</li>
-<li>Voice and tone</li>
-<li>Existing materials</li>
-<li>Timeline</li>
-<li>Publishing platform</li>
-</ul>
-<a class="button" href="mailto:contactfreedomstudioinfo@gmail.com?subject=Freedom%20Studio%20Intake">Start Studio Intake</a>
-</div>
+<label>Organization / Company</label>
+<input type="text" name="organization">
 
-<div class="card">
-<h3>Freedom Productions Intake</h3>
-<p>For events, town halls, livestreams, founder videos, brand storytelling, civic productions, oral histories, or deposition/media support.</p>
-<ul>
-<li>Production type</li>
-<li>Audience</li>
-<li>Date and location</li>
-<li>Remote or onsite</li>
-<li>Recording/livestream needs</li>
-<li>Creative direction needs</li>
-</ul>
-<a class="button" href="mailto:freedomproductionsinfo@gmail.com?subject=Freedom%20Productions%20Intake">Start Productions Intake</a>
-</div>
+<label>Which division best fits your need? *</label>
+<select name="division" required>
+<option value="">Select one</option>
+<option>Lantern Advisory</option>
+<option>Lantern Systems</option>
+<option>Lantern Research</option>
+<option>Freedom Studio</option>
+<option>Freedom Productions</option>
+<option>Threadline Intelligence</option>
+<option>Not sure / Multiple divisions</option>
+</select>
 
-<div class="card">
-<h3>Threadline Intelligence Intake</h3>
-<p>For information retrieval, operational memory, knowledge intelligence, scattered files, archives, private deployment, or pilot use cases.</p>
-<ul>
-<li>Where information currently lives</li>
-<li>Approximate data volume</li>
-<li>Number of users</li>
-<li>Security requirements</li>
-<li>Desired search/retrieval outcomes</li>
-<li>Cloud, private cloud, or on-premise needs</li>
-</ul>
-<a class="button" href="mailto:threadlineintelligence@gmail.com?subject=Threadline%20Intelligence%20Intake">Start Threadline Intake</a>
-</div>
+<label>What type of support are you looking for? *</label>
+<select name="support_type" required>
+<option value="">Select one</option>
+<option>Project-based support</option>
+<option>Ongoing retainer support</option>
+<option>Fractional support</option>
+<option>Enterprise / family office support</option>
+<option>Research or analysis</option>
+<option>Writing / storytelling / ghostwriting</option>
+<option>Production / event / video support</option>
+<option>Technology / systems support</option>
+<option>Threadline pilot or information retrieval</option>
+<option>Other / custom</option>
+</select>
+
+<label>Desired timeline *</label>
+<select name="timeline" required>
+<option value="">Select one</option>
+<option>Urgent / within 7 days</option>
+<option>Within 2–4 weeks</option>
+<option>Within 1–3 months</option>
+<option>Flexible</option>
+<option>Not sure yet</option>
+</select>
+
+<label>Estimated budget range</label>
+<select name="budget">
+<option value="">Select one</option>
+<option>Under $2,500</option>
+<option>$2,500–$5,000</option>
+<option>$5,000–$15,000</option>
+<option>$15,000–$50,000</option>
+<option>$50,000+</option>
+<option>Not sure yet</option>
+</select>
+
+<label>Please describe what you need *</label>
+<textarea name="description" required></textarea>
+
+<label>Anything else we should know?</label>
+<textarea name="additional_notes"></textarea>
+
+<p class="note">By submitting this form, you understand this inquiry does not create an attorney-client relationship, legal representation, or a guaranteed engagement. Lantern Enterprises will review your request and respond if the matter appears appropriate for further discussion.</p>
+
+<button type="submit">Submit Intake</button>
+
+</form>
 
 </div>
 </section>
 
-<footer>Client Intake • Lantern Enterprises</footer>
+<footer>
+Lantern Enterprises • Call or Text (909) 451-9502
+</footer>
 
 </body>
 </html>
