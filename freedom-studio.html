@@ -253,7 +253,31 @@
       font-size: 17px;
       margin-bottom: 0;
     }
+.editorial-break {
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-top: 1px solid rgba(217,164,65,.18);
+  border-bottom: 1px solid rgba(217,164,65,.18);
+}
 
+.editorial-image {
+  min-height: 520px;
+  background: center / cover no-repeat;
+}
+
+.editorial-text {
+  padding: 90px 7vw;
+  background: linear-gradient(135deg, #070201, #1b0703 55%, #351106);
+}
+
+.interview-image {
+  background-image: url("freedom-interview.jpg");
+}
+
+.library-image {
+  background-image: url("freedom-library.jpg");
+}
     .who {
       background: rgba(7,2,1,.96);
     }
@@ -293,12 +317,13 @@
       }
 
       .intro-grid,
-      .service-grid,
-      .split,
-      .approach-grid,
-      .bundle-grid {
-        grid-template-columns: 1fr;
-      }
+.service-grid,
+.split,
+.editorial-break,
+.approach-grid,
+.bundle-grid {
+  grid-template-columns: 1fr;
+}
 
       .who ul { columns: 1; }
 
@@ -353,7 +378,7 @@
 
       <div>
         <p>
-          Many purpose-driven founders, organizations, and leaders are doing
+          Many purpose driven founders, organizations, and leaders are doing
           meaningful work but struggle to put it into words or story. Their
           message becomes diluted, overly polished, or lost entirely.
         </p>
@@ -397,7 +422,7 @@
             <div class="card-body">
               <h3>Story to Video</h3>
               <p>
-                Narrative-driven short video, founder stories, brand storytelling,
+                Narrative driven short video, founder stories, brand storytelling,
                 script development, story architecture, and creative direction.
               </p>
             </div>
@@ -481,19 +506,38 @@
       </div>
     </div>
   </section>
+<section class="editorial-break">
+  <div class="editorial-image interview-image"></div>
 
+  <div class="editorial-text">
+    <div class="eyebrow">Listening First</div>
+    <h2>Every Strong Story Begins in Conversation.</h2>
+    <div class="rule"></div>
+    <p>
+      Freedom Studio is rooted in careful listening. Before anything is written,
+      shaped, recorded, or produced, we take time to understand the person,
+      purpose, audience, and truth behind the work.
+    </p>
+    <p>
+      Through interviews, guided conversations, and thoughtful editorial inquiry,
+      we help uncover the language, themes, and stories that already exist beneath
+      the surface.
+    </p>
+  </div>
+</section>
+  
   <section class="who">
     <div class="content">
       <h2>Who We Serve</h2>
       <div class="rule"></div>
 
       <ul>
-        <li>Purpose-driven founders</li>
-        <li>Women-led businesses</li>
-        <li>Values-led organizations</li>
+        <li>Purpose driven founders</li>
+        <li>Women led businesses</li>
+        <li>Values led organizations</li>
         <li>Funded nonprofits</li>
         <li>Community leaders</li>
-        <li>Mission-driven professionals</li>
+        <li>Mission driven professionals</li>
         <li>Individuals doing meaningful work</li>
       </ul>
 
@@ -502,6 +546,25 @@
     </div>
   </section>
 
+  <section class="editorial-break">
+  <div class="editorial-text">
+    <div class="eyebrow">The Craft</div>
+    <h2>Thoughtful Work Requires Room to Think.</h2>
+    <div class="rule"></div>
+    <p>
+      The work of meaningful expression is part research, part discernment, and
+      part craft. Freedom Studio helps turn scattered ideas, memories, notes,
+      and intentions into language that feels clear, honest, and durable.
+    </p>
+    <p>
+      The goal is not to sound polished for the sake of polish. The goal is to
+      communicate with clarity, dignity, and human resonance.
+    </p>
+  </div>
+
+  <div class="editorial-image library-image"></div>
+</section>
+  
   <section class="cta">
     <div class="content">
       <h2>Let’s Build Your Story.</h2>
