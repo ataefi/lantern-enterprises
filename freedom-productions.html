@@ -4,184 +4,214 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Freedom Productions | Lantern Enterprises</title>
+
 <style>
 :root{--gold:#D9A441;--sunset:#D96B2B;--ivory:#F8F2EA;--cream:#F0D6A2;}
 *{box-sizing:border-box}
 body{margin:0;font-family:Georgia,"Times New Roman",serif;color:var(--ivory);background:linear-gradient(135deg,#070201,#1b0703 50%,#351106);}
-header{min-height:92px;display:flex;justify-content:space-between;align-items:center;padding:0 7vw;background:rgba(15,4,1,.9);border-bottom:1px solid rgba(217,164,65,.22);}
-.logo{color:var(--gold);letter-spacing:5px;text-transform:uppercase;font-weight:bold;font-size:18px;text-decoration:none}
-nav a{color:var(--ivory);text-decoration:none;margin-left:24px;font-weight:bold;font-size:15px}
-section{padding:75px 7vw}
-.hero{background:radial-gradient(circle at 75% 18%,rgba(217,107,43,.25),transparent 25%),linear-gradient(135deg,#090201,#210904);}
-h1{font-size:clamp(52px,7vw,92px);line-height:1.02;color:var(--gold);font-weight:400;margin:0 0 22px;text-shadow:0 0 20px rgba(217,164,65,.3)}
-h2{color:var(--gold);font-size:38px;font-weight:400;margin-top:50px}
-h3{color:var(--gold);font-size:28px;font-weight:400;margin-top:34px}
-p,li{color:var(--cream);font-size:19px;line-height:1.75}
+a{color:inherit;text-decoration:none}
+header{min-height:92px;display:flex;justify-content:space-between;align-items:center;padding:0 7vw;background:rgba(15,4,1,.92);border-bottom:1px solid rgba(217,164,65,.22);position:sticky;top:0;z-index:10}
+.logo{color:var(--gold);letter-spacing:5px;text-transform:uppercase;font-weight:bold;font-size:18px}
+nav a{color:var(--ivory);margin-left:24px;font-weight:bold;font-size:15px}
+section{padding:80px 7vw}
+.hero{min-height:620px;display:flex;align-items:center;background:linear-gradient(90deg,rgba(7,2,1,.98) 0%,rgba(7,2,1,.86) 38%,rgba(7,2,1,.34) 100%),url("production-hero.png") center right/cover no-repeat;border-bottom:1px solid rgba(217,164,65,.2)}
 .content{max-width:1050px;margin:auto}
-.callout{border-left:4px solid var(--sunset);background:rgba(0,0,0,.22);padding:22px 28px;margin:32px 0;color:var(--gold);font-size:21px}
-.card{border:1px solid rgba(217,164,65,.32);background:rgba(0,0,0,.22);padding:28px;margin:24px 0}
-.button{display:inline-block;margin-top:24px;border:1px solid var(--gold);color:var(--gold);padding:15px 30px;text-decoration:none;text-transform:uppercase;letter-spacing:2px;font-size:14px}
+.hero .content{max-width:680px;margin:0}
+.eyebrow{color:var(--gold);text-transform:uppercase;letter-spacing:3px;font-size:14px;font-weight:bold;margin-bottom:22px}
+h1{font-size:clamp(58px,7vw,96px);line-height:1.02;color:var(--gold);font-weight:400;margin:0 0 24px;text-shadow:0 0 20px rgba(217,164,65,.3)}
+h2{color:var(--gold);font-size:clamp(36px,4vw,56px);line-height:1.1;font-weight:400;margin:0 0 22px}
+h3{color:var(--gold);font-size:24px;font-weight:400;margin:0 0 14px}
+p,li{color:var(--cream);font-size:19px;line-height:1.75}
+.rule{width:58px;height:2px;background:var(--gold);margin:22px 0 28px}
+.button{display:inline-block;margin-top:26px;border:1px solid var(--gold);color:var(--gold);padding:15px 30px;text-transform:uppercase;letter-spacing:2px;font-size:14px;font-weight:bold}
+.button:hover{background:var(--gold);color:#070201}
+.intro{background:rgba(7,2,1,.96)}
+.intro-grid{max-width:1180px;margin:auto;display:grid;grid-template-columns:.85fr 1.3fr;gap:64px;align-items:start}
+.service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:34px}
+.service-card{border:1px solid rgba(217,164,65,.3);background:rgba(0,0,0,.24);overflow:hidden;box-shadow:0 18px 45px rgba(0,0,0,.24)}
+.service-card img{width:100%;height:245px;object-fit:cover;display:block}
+.card-body{padding:28px}
+.card-body p{font-size:17px;margin-bottom:0}
+.split,.editorial-break{padding:0;display:grid;grid-template-columns:1fr 1fr;border-top:1px solid rgba(217,164,65,.18);border-bottom:1px solid rgba(217,164,65,.18)}
+.split-image,.editorial-image{min-height:580px;background:center/cover no-repeat}
+.split-image{background-image:url("production-control-room.png")}
+.editorial-text,.split-content{padding:90px 7vw;background:radial-gradient(circle at 20% 20%,rgba(217,107,43,.18),transparent 28%),linear-gradient(135deg,#070201,#1b0703 55%,#351106)}
+.camera-image{background-image:url("production-camera.png")}
+.stage-image{background-image:url("production-stage.png")}
+.editing-image{background-image:url("production-editing.png")}
+.bundle-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:34px}
+.bundle{border:1px solid rgba(217,164,65,.32);background:rgba(0,0,0,.22);padding:30px}
+.bundle p{font-size:17px;margin-bottom:0}
+.cta{background:radial-gradient(circle at 18% 30%,rgba(217,107,43,.22),transparent 30%),linear-gradient(135deg,#1b0703,#351106);border-top:1px solid rgba(217,164,65,.2)}
 footer{text-align:center;padding:55px 7vw;color:var(--gold);letter-spacing:4px;text-transform:uppercase;border-top:1px solid rgba(217,164,65,.18);background:#070201}
+@media(max-width:950px){
+header{flex-direction:column;gap:18px;padding:24px 7vw}
+nav a{margin:0 10px}
+.intro-grid,.service-grid,.split,.editorial-break,.bundle-grid{grid-template-columns:1fr}
+.hero{background:linear-gradient(90deg,rgba(7,2,1,.98),rgba(7,2,1,.78)),url("production-hero.png") center/cover no-repeat}
+}
 </style>
 </head>
 
 <body>
 
 <header>
-  <a class="logo" href="index.html">Lantern Enterprises</a>
-  <nav>
-    <a href="index.html#mission">Mission</a>
-    <a href="index.html#services">Services</a>
-    <a href="index.html#contact">Contact</a>
-  </nav>
+<a class="logo" href="index.html">Lantern Enterprises</a>
+<nav>
+<a href="index.html#mission">Mission</a>
+<a href="index.html#services">Services</a>
+<a href="freedom-studio.html">Freedom Studio</a>
+<a href="freedom-productions.html">Productions</a>
+<a href="index.html#contact">Contact</a>
+</nav>
 </header>
 
+<main>
+
 <section class="hero">
-  <div class="content">
-    <h1>Freedom Productions</h1>
-    <p><em>Strategic communications production for events, stories, broadcasts, civic moments, and meaningful experiences.</em></p>
-  </div>
+<div class="content">
+<div class="eyebrow">Services / Freedom Productions</div>
+<h1>Freedom Productions</h1>
+<div class="rule"></div>
+<p><span style="color:var(--gold)">Strategic communications production for events, stories, broadcasts, civic moments, and meaningful experiences.</span></p>
+<a class="button" href="mailto:freedomproductionsinfo@gmail.com?subject=Freedom%20Productions%20Inquiry">Start a Conversation</a>
+</div>
+</section>
+
+<section class="intro">
+<div class="intro-grid">
+<div>
+<h2>Production With Purpose.</h2>
+<div class="rule"></div>
+<p>Freedom Productions helps organizations, leaders, communities, and mission-driven teams translate ideas, events, messages, and moments into organized, professional, emotionally resonant experiences.</p>
+</div>
+
+<div>
+<p>We are not simply a production crew. We approach production as communication: what needs to be said, who needs to hear it, how it should feel, and what must happen behind the scenes so the message is delivered with clarity and dignity.</p>
+<p>Freedom Productions supports corporate, civic, legal, nonprofit, educational, and creative environments where execution matters and the story behind the work cannot be lost.</p>
+
+<div class="service-grid">
+<article class="service-card">
+<img src="production-live-event.png" alt="Live event production control room">
+<div class="card-body">
+<h3>Events & Town Halls</h3>
+<p>Corporate town halls, executive broadcasts, leadership updates, employee communications events, and hybrid meetings.</p>
+</div>
+</article>
+
+<article class="service-card">
+<img src="production-film-set.png" alt="Film production set">
+<div class="card-body">
+<h3>Storytelling Videos</h3>
+<p>Founder videos, brand storytelling, mission videos, website hero videos, interviews, scripts, and creative direction.</p>
+</div>
+</article>
+
+<article class="service-card">
+<img src="production-editing.png" alt="Video editing studio">
+<div class="card-body">
+<h3>Post & Asset Support</h3>
+<p>Recording coordination, video clip organization, post-event asset organization, narrative flow, and production documentation.</p>
+</div>
+</article>
+</div>
+</div>
+</div>
+</section>
+
+<section class="split">
+<div class="split-image"></div>
+<div class="split-content">
+<div class="eyebrow">Behind the Scenes</div>
+<h2>Clear Communication Requires Real Production Discipline.</h2>
+<div class="rule"></div>
+<p>Production is not just cameras, microphones, and schedules. It is the discipline of helping people be seen, heard, understood, and remembered.</p>
+<p>Freedom Productions helps clients think through the full experience — message, audience, format, speaker flow, technical execution, recording, and follow-through.</p>
+</div>
+</section>
+
+<section class="editorial-break">
+<div class="editorial-text">
+<div class="eyebrow">What We Support</div>
+<h2>From the Room to the Audience Beyond It.</h2>
+<div class="rule"></div>
+<p>We support corporate events, civic gatherings, educational programs, panel discussions, livestreams, hybrid meetings, founder stories, oral histories, and legal or litigation-adjacent production environments.</p>
+<p>The goal is not to overproduce. The goal is to make the message clear, the experience steady, and the people involved feel prepared.</p>
+</div>
+<div class="editorial-image camera-image"></div>
+</section>
+
+<section class="editorial-break">
+<div class="editorial-image stage-image"></div>
+<div class="editorial-text">
+<div class="eyebrow">Live & Broadcast</div>
+<h2>Every Moment Needs a Run of Show.</h2>
+<div class="rule"></div>
+<p>Whether the audience is in the room, online, or both, successful production depends on sequencing, preparation, timing, contingency planning, and calm execution.</p>
+<p>Freedom Productions brings structure to complex moments so leaders, speakers, and participants can focus on the message rather than the machinery.</p>
+</div>
 </section>
 
 <section>
 <div class="content">
+<div class="eyebrow">Engagement Options</div>
+<h2>Built Around the Moment You Need to Deliver.</h2>
+<div class="rule"></div>
 
-<h2>About Freedom Productions</h2>
-
-<p>Freedom Productions helps organizations, leaders, communities, and mission-driven teams translate ideas, events, messages, and moments into organized, professional, emotionally resonant experiences.</p>
-
-<p>We are not simply a production crew. We approach production as communication: what needs to be said, who needs to hear it, how it should feel, and what must happen behind the scenes so the message is delivered with clarity and dignity.</p>
-
-<p>Freedom Productions supports corporate, civic, legal, nonprofit, educational, and creative environments where execution matters and the story behind the work cannot be lost.</p>
-
-<div class="callout">
-Production is not just cameras, microphones, and schedules. It is the discipline of helping people be seen, heard, understood, and remembered.
-</div>
-
-<h2>What We Do</h2>
-
-<div class="card">
-<h3>Corporate Events & Town Halls</h3>
-<p>Professional support for organizations that need clear, well-run internal and external communications events.</p>
-<ul>
-<li>Corporate town halls</li>
-<li>Executive broadcasts</li>
-<li>Leadership updates</li>
-<li>Employee communications events</li>
-<li>Hybrid meetings</li>
-<li>Run-of-show development</li>
-<li>Speaker preparation support</li>
-<li>Production coordination</li>
-</ul>
-</div>
-
-<div class="card">
-<h3>Civic & Community Productions</h3>
-<p>Production support for public-facing, civic, educational, and community-centered events.</p>
-<ul>
-<li>City hall-style meetings</li>
-<li>Community forums</li>
-<li>Educational programs</li>
-<li>Panel discussions</li>
-<li>Public information sessions</li>
-<li>Livestream coordination</li>
-<li>Recording and documentation support</li>
-<li>Event operations planning</li>
-</ul>
-</div>
-
-<div class="card">
-<h3>Livestreams & Broadcast Support</h3>
-<p>Support for events and communications that need to reach audiences beyond the room.</p>
-<ul>
-<li>Livestream planning</li>
-<li>Platform coordination</li>
-<li>Remote speaker support</li>
-<li>Technical run-throughs</li>
-<li>Show flow support</li>
-<li>Recording coordination</li>
-<li>Post-event asset organization</li>
-</ul>
-</div>
-
-<div class="card">
-<h3>Founder & Brand Storytelling Videos</h3>
-<p>Human-centered video support for founders, organizations, and leaders who want to communicate purpose without sounding overly polished or promotional.</p>
-<ul>
-<li>Founder videos</li>
-<li>Brand storytelling videos</li>
-<li>Mission videos</li>
-<li>Website hero videos</li>
-<li>Short-form social clips</li>
-<li>Interview planning</li>
-<li>Script and narrative arc support</li>
-<li>Creative direction</li>
-</ul>
-</div>
-
-<div class="card">
-<h3>Documentary-Style & Oral History Projects</h3>
-<p>Story preservation for families, communities, organizations, founders, and mission-driven leaders.</p>
-<ul>
-<li>Oral histories</li>
-<li>Legacy interviews</li>
-<li>Personal story projects</li>
-<li>Community memory projects</li>
-<li>Archival storytelling</li>
-<li>Interview preparation</li>
-<li>Story structure and editing guidance</li>
-</ul>
-</div>
-
-<div class="card">
-<h3>Legal, Deposition & Matter Support</h3>
-<p>Production and documentation support for legal and litigation-adjacent environments.</p>
-<ul>
-<li>Deposition recording support</li>
-<li>Remote deposition coordination</li>
-<li>Exhibit display support</li>
-<li>Hearing and mediation technical support</li>
-<li>Video clip organization</li>
-<li>Presentation support</li>
-<li>Technical preparation for legal teams</li>
-</ul>
-</div>
-
-<h2>Engagement Options</h2>
-
-<div class="card">
+<div class="bundle-grid">
+<article class="bundle">
 <h3>Strategic Event Production</h3>
-<p>For clients planning a town hall, civic meeting, corporate event, livestream, or community production that requires both message clarity and operational execution.</p>
-</div>
+<p>For town halls, civic meetings, corporate events, livestreams, and community productions requiring both message clarity and operational execution.</p>
+</article>
 
-<div class="card">
+<article class="bundle">
 <h3>Executive Communications Production</h3>
-<p>For leaders and organizations needing polished internal or external communications delivered through video, broadcast, livestream, or hybrid event formats.</p>
-</div>
+<p>For leaders and organizations needing polished internal or external communications delivered through video, broadcast, livestream, or hybrid formats.</p>
+</article>
 
-<div class="card">
+<article class="bundle">
 <h3>Founder Story Package</h3>
-<p>For founders and mission-driven leaders who need a clear narrative, script, interview structure, and video direction for brand or website use.</p>
-</div>
+<p>For founders and mission-driven leaders who need narrative, script, interview structure, and video direction for brand or website use.</p>
+</article>
 
-<div class="card">
+<article class="bundle">
 <h3>Legacy Story Project</h3>
-<p>For families, organizations, founders, and communities who want to preserve meaningful stories, memories, values, and lived experience before they disappear.</p>
-</div>
+<p>For families, organizations, founders, and communities preserving meaningful stories, memories, values, and lived experience.</p>
+</article>
 
-<div class="card">
+<article class="bundle">
+<h3>Legal & Matter Support</h3>
+<p>For deposition recording, remote deposition coordination, exhibit display, hearings, mediations, video clip organization, and legal presentation support.</p>
+</article>
+
+<article class="bundle">
 <h3>Custom Production Support</h3>
 <p>For events, recordings, legal support, storytelling, or communications needs that do not fit neatly into a standard category.</p>
+</article>
 </div>
-
-<h2>Get in Touch</h2>
-
-<p>If you would like to discuss an event, video, livestream, civic production, legal production support, or story-based media project, contact Freedom Productions.</p>
-
-<a class="button" href="mailto:freedomproductionsinfo@gmail.com?subject=Freedom%20Productions%20Inquiry">Contact Freedom Productions</a>
-
 </div>
 </section>
+
+<section class="editorial-break">
+<div class="editorial-text">
+<div class="eyebrow">Post Production</div>
+<h2>The Work Continues After the Room Clears.</h2>
+<div class="rule"></div>
+<p>Strong production does not end when the event ends. Recordings, clips, notes, speaker materials, and follow-up assets all need to be organized so the value of the moment is not lost.</p>
+<p>Freedom Productions helps clients preserve, refine, and reuse what matters.</p>
+</div>
+<div class="editorial-image editing-image"></div>
+</section>
+
+<section class="cta">
+<div class="content">
+<h2>Let’s Produce the Moment Well.</h2>
+<p>If you would like to discuss an event, video, livestream, civic production, legal production support, or story-based media project, contact Freedom Productions.</p>
+<a class="button" href="mailto:freedomproductionsinfo@gmail.com?subject=Freedom%20Productions%20Inquiry">Contact Freedom Productions</a>
+</div>
+</section>
+
+</main>
 
 <footer>Freedom Productions • Lantern Enterprises</footer>
 
