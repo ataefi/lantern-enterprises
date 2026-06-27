@@ -10,40 +10,47 @@
 *{box-sizing:border-box}
 body{margin:0;font-family:Georgia,"Times New Roman",serif;color:var(--ivory);background:linear-gradient(135deg,#070201,#1b0703 50%,#351106);}
 a{color:inherit;text-decoration:none}
-header{min-height:92px;display:flex;justify-content:space-between;align-items:center;padding:0 7vw;background:rgba(15,4,1,.92);border-bottom:1px solid rgba(217,164,65,.22);position:sticky;top:0;z-index:10}
+header{min-height:92px;display:flex;justify-content:space-between;align-items:center;padding:0 7vw;background:rgba(15,4,1,.9);border-bottom:1px solid rgba(217,164,65,.22);position:sticky;top:0;z-index:10}
 .logo{color:var(--gold);letter-spacing:5px;text-transform:uppercase;font-weight:bold;font-size:18px}
 nav a{color:var(--ivory);margin-left:24px;font-weight:bold;font-size:15px}
-section{padding:80px 7vw}
-.hero{min-height:620px;display:flex;align-items:center;background:linear-gradient(90deg,rgba(7,2,1,.98) 0%,rgba(7,2,1,.86) 38%,rgba(7,2,1,.34) 100%),url("PRODUCTION-HERO.png") center right/cover no-repeat;border-bottom:1px solid rgba(217,164,65,.2)}
+section{padding:75px 7vw}
 .content{max-width:1050px;margin:auto}
+.hero{min-height:620px;display:flex;align-items:center;background:linear-gradient(90deg,rgba(7,2,1,.98) 0%,rgba(7,2,1,.84) 42%,rgba(7,2,1,.35) 100%),url("PRODUCTION-HERO.png") center right/cover no-repeat;border-bottom:1px solid rgba(217,164,65,.22)}
 .hero .content{max-width:680px;margin:0}
 .eyebrow{color:var(--gold);text-transform:uppercase;letter-spacing:3px;font-size:14px;font-weight:bold;margin-bottom:22px}
-h1{font-size:clamp(58px,7vw,96px);line-height:1.02;color:var(--gold);font-weight:400;margin:0 0 24px;text-shadow:0 0 20px rgba(217,164,65,.3)}
-h2{color:var(--gold);font-size:clamp(36px,4vw,56px);line-height:1.1;font-weight:400;margin:0 0 22px}
-h3{color:var(--gold);font-size:24px;font-weight:400;margin:0 0 14px}
+h1{font-size:clamp(52px,7vw,92px);line-height:1.02;color:var(--gold);font-weight:400;margin:0 0 22px;text-shadow:0 0 20px rgba(217,164,65,.3)}
+h2{color:var(--gold);font-size:38px;font-weight:400;margin:0 0 20px}
+h3{color:var(--gold);font-size:28px;font-weight:400;margin:0 0 14px}
 p,li{color:var(--cream);font-size:19px;line-height:1.75}
 .rule{width:58px;height:2px;background:var(--gold);margin:22px 0 28px}
-.button{display:inline-block;margin-top:26px;border:1px solid var(--gold);color:var(--gold);padding:15px 30px;text-transform:uppercase;letter-spacing:2px;font-size:14px;font-weight:bold}
+.button{display:inline-block;margin-top:24px;border:1px solid var(--gold);color:var(--gold);padding:15px 30px;text-transform:uppercase;letter-spacing:2px;font-size:14px;font-weight:bold}
 .button:hover{background:var(--gold);color:#070201}
+
 .intro{background:rgba(7,2,1,.96)}
 .intro-grid{max-width:1180px;margin:auto;display:grid;grid-template-columns:.85fr 1.3fr;gap:64px;align-items:start}
+
 .service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:34px}
-.service-card{border:1px solid rgba(217,164,65,.3);background:rgba(0,0,0,.24);overflow:hidden;box-shadow:0 18px 45px rgba(0,0,0,.24)}
+.service-card{border:1px solid rgba(217,164,65,.32);background:rgba(0,0,0,.22);overflow:hidden}
 .service-card img{width:100%;height:245px;object-fit:cover;display:block}
 .card-body{padding:28px}
 .card-body p{font-size:17px;margin-bottom:0}
+
 .split,.editorial-break{padding:0;display:grid;grid-template-columns:1fr 1fr;border-top:1px solid rgba(217,164,65,.18);border-bottom:1px solid rgba(217,164,65,.18)}
 .split-image,.editorial-image{min-height:580px;background:center/cover no-repeat}
-.split-image{background-image:url("PRODUCTION-CONTROL-ROOM.png")}
-.editorial-text,.split-content{padding:90px 7vw;background:radial-gradient(circle at 20% 20%,rgba(217,107,43,.18),transparent 28%),linear-gradient(135deg,#070201,#1b0703 55%,#351106)}
+.split-image{background-image:url("PRODUCTION-CONTROL%20ROOM.png")}
 .camera-image{background-image:url("PRODUCTION-CAMERA.png")}
-.stage-image{background-image:url("PRODUCTION-STAGE.png")}
+.stage-image{background-image:url("LANTERN-STUDIO%20SET%20WITH%20LIGHTS.png")}
 .editing-image{background-image:url("PRODUCTION-EDITING.png")}
+.oral-history-image{background-image:url("PRODUCTION-ORAL-HISTORY.png")}
+.editorial-text,.split-content{padding:90px 7vw;background:linear-gradient(135deg,#070201,#1b0703 50%,#351106)}
+
 .bundle-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:34px}
-.bundle{border:1px solid rgba(217,164,65,.32);background:rgba(0,0,0,.22);padding:30px}
+.bundle{border:1px solid rgba(217,164,65,.32);background:rgba(0,0,0,.22);padding:28px}
 .bundle p{font-size:17px;margin-bottom:0}
-.cta{background:radial-gradient(circle at 18% 30%,rgba(217,107,43,.22),transparent 30%),linear-gradient(135deg,#1b0703,#351106);border-top:1px solid rgba(217,164,65,.2)}
+
+.cta{background:linear-gradient(135deg,#1b0703,#351106);border-top:1px solid rgba(217,164,65,.2)}
 footer{text-align:center;padding:55px 7vw;color:var(--gold);letter-spacing:4px;text-transform:uppercase;border-top:1px solid rgba(217,164,65,.18);background:#070201}
+
 @media(max-width:950px){
 header{flex-direction:column;gap:18px;padding:24px 7vw}
 nav a{margin:0 10px}
@@ -73,7 +80,7 @@ nav a{margin:0 10px}
 <div class="eyebrow">Services / Freedom Productions</div>
 <h1>Freedom Productions</h1>
 <div class="rule"></div>
-<p><span style="color:var(--gold)">Strategic communications production for events, stories, broadcasts, civic moments, and meaningful experiences.</span></p>
+<p><em>Strategic communications production for events, stories, broadcasts, civic moments, and meaningful experiences.</em></p>
 <a class="button" href="mailto:freedomproductionsinfo@gmail.com?subject=Freedom%20Productions%20Inquiry">Start a Conversation</a>
 </div>
 </section>
@@ -100,7 +107,7 @@ nav a{margin:0 10px}
 </article>
 
 <article class="service-card">
-<img src="PRODUCTION-FILM-SET.png" alt="Film production set">
+<img src="PRODUCTION-FILM%20SET.png" alt="Film production set">
 <div class="card-body">
 <h3>Storytelling Videos</h3>
 <p>Founder videos, brand storytelling, mission videos, website hero videos, interviews, scripts, and creative direction.</p>
@@ -194,13 +201,24 @@ nav a{margin:0 10px}
 
 <section class="editorial-break">
 <div class="editorial-text">
+<div class="eyebrow">Oral History</div>
+<h2>Some Stories Should Be Preserved Before They Disappear.</h2>
+<div class="rule"></div>
+<p>Freedom Productions supports oral histories, legacy interviews, personal story projects, community memory projects, archival storytelling, interview preparation, and story structure.</p>
+<p>These projects are rooted in dignity, listening, and the belief that lived experience deserves to be remembered with care.</p>
+</div>
+<div class="editorial-image oral-history-image"></div>
+</section>
+
+<section class="editorial-break">
+<div class="editorial-image editing-image"></div>
+<div class="editorial-text">
 <div class="eyebrow">Post Production</div>
 <h2>The Work Continues After the Room Clears.</h2>
 <div class="rule"></div>
 <p>Strong production does not end when the event ends. Recordings, clips, notes, speaker materials, and follow-up assets all need to be organized so the value of the moment is not lost.</p>
 <p>Freedom Productions helps clients preserve, refine, and reuse what matters.</p>
 </div>
-<div class="editorial-image editing-image"></div>
 </section>
 
 <section class="cta">
