@@ -4,15 +4,25 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Lantern Advisory | Lantern Enterprises</title>
+
 <style>
 :root{--gold:#D9A441;--sunset:#D96B2B;--ivory:#F8F2EA;--cream:#F0D6A2;}
 *{box-sizing:border-box}
 body{margin:0;font-family:Georgia,"Times New Roman",serif;color:var(--ivory);background:linear-gradient(135deg,#070201,#1b0703 50%,#351106);}
-header{min-height:92px;display:flex;justify-content:space-between;align-items:center;padding:0 7vw;background:rgba(15,4,1,.9);border-bottom:1px solid rgba(217,164,65,.22);}
+header{min-height:92px;display:flex;justify-content:space-between;align-items:center;padding:0 7vw;background:rgba(15,4,1,.9);border-bottom:1px solid rgba(217,164,65,.22);position:sticky;top:0;z-index:50;}
 .logo{color:var(--gold);letter-spacing:5px;text-transform:uppercase;font-weight:bold;font-size:18px;text-decoration:none}
 nav a{color:var(--ivory);text-decoration:none;margin-left:24px;font-weight:bold;font-size:15px}
 section{padding:75px 7vw}
-.hero{background:radial-gradient(circle at 75% 18%,rgba(217,107,43,.25),transparent 25%),linear-gradient(135deg,#090201,#210904);}
+.hero{
+  min-height:76vh;
+  display:flex;
+  align-items:center;
+  background:
+    linear-gradient(90deg,rgba(7,2,1,.98) 0%,rgba(7,2,1,.88) 38%,rgba(27,7,3,.45) 68%,rgba(7,2,1,.42) 100%),
+    url("advisory-hero.png");
+  background-size:cover;
+  background-position:center;
+}
 h1{font-size:clamp(52px,7vw,92px);line-height:1.02;color:var(--gold);font-weight:400;margin:0 0 22px;text-shadow:0 0 20px rgba(217,164,65,.3)}
 h2{color:var(--gold);font-size:38px;font-weight:400;margin-top:50px}
 h3{color:var(--gold);font-size:28px;font-weight:400;margin-top:34px}
@@ -22,9 +32,26 @@ p,li{color:var(--cream);font-size:19px;line-height:1.75}
 .card{border:1px solid rgba(217,164,65,.32);background:rgba(0,0,0,.22);padding:28px;margin:24px 0}
 .button{display:inline-block;margin-top:24px;border:1px solid var(--gold);color:var(--gold);padding:15px 30px;text-decoration:none;text-transform:uppercase;letter-spacing:2px;font-size:14px}
 .note{color:#d7b56d;font-size:16px}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center;margin:48px 0}
+.split img,.wide-image{width:100%;height:100%;min-height:360px;object-fit:cover;border:1px solid rgba(217,164,65,.28);display:block}
+.card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;margin-top:28px}
+.image-card{border:1px solid rgba(217,164,65,.32);background:rgba(0,0,0,.22);overflow:hidden}
+.image-card img{width:100%;height:220px;object-fit:cover;display:block;border-bottom:1px solid rgba(217,164,65,.22)}
+.image-card .card-body{padding:26px}
+.image-card h3{margin-top:0}
+.band{background:linear-gradient(135deg,#070201,#1b0703 55%,#351106);border-top:1px solid rgba(217,164,65,.18);border-bottom:1px solid rgba(217,164,65,.18)}
 footer{text-align:center;padding:55px 7vw;color:var(--gold);letter-spacing:4px;text-transform:uppercase;border-top:1px solid rgba(217,164,65,.18);background:#070201}
+
+@media(max-width:900px){
+  header{display:block;text-align:center;padding:24px}
+  nav{margin-top:18px}
+  nav a{display:inline-block;margin:8px 10px}
+  .split{grid-template-columns:1fr}
+  .hero{text-align:center}
+}
 </style>
 </head>
+
 <body>
 
 <header>
@@ -40,131 +67,182 @@ footer{text-align:center;padding:55px 7vw;color:var(--gold);letter-spacing:4px;t
   <div class="content">
     <h1>Lantern Advisory</h1>
     <p><em>Strategic litigation support, discovery consulting, and information structuring for complex matters.</em></p>
+    <a class="button" href="mailto:lanternenterpriseslegal@gmail.com?subject=Lantern%20Advisory%20Inquiry">Start a Conversation</a>
   </div>
 </section>
 
 <section>
 <div class="content">
 
-<h2>About Lantern Advisory</h2>
+<div class="split">
+  <div>
+    <h2>About Lantern Advisory</h2>
 
-<p>Lantern Advisory helps legal professionals, organizations, consultants, and complex matters bring order to discovery-heavy and information-intensive work.</p>
+    <p>Lantern Advisory helps legal professionals, organizations, consultants, and complex matters bring order to discovery-heavy and information-intensive work.</p>
 
-<p>Many cases become difficult not because the information does not exist, but because it is scattered across records, correspondence, productions, timelines, notes, responses, exhibits, and conflicting narratives.</p>
+    <p>Many cases become difficult not because the information does not exist, but because it is scattered across records, correspondence, productions, timelines, notes, responses, exhibits, and conflicting narratives.</p>
 
-<p>Lantern Advisory supports the organization, preparation, analysis, and presentation of that information so attorneys and legal teams can focus more effectively on litigation, strategy, advocacy, and client representation.</p>
+    <p>Lantern Advisory supports the organization, preparation, analysis, and presentation of that information so attorneys and legal teams can focus more effectively on litigation, strategy, advocacy, and client representation.</p>
+  </div>
+
+  <img src="advisory-timeline.png" alt="Investigative timeline and case organization workspace">
+</div>
 
 <div class="callout">
 Lantern Advisory is not a law firm and does not provide legal representation or legal advice. Attorney-supervised work remains under the direction and supervision of licensed counsel.
 </div>
 
+</div>
+</section>
+
+<section class="band">
+<div class="content">
+
 <h2>What We Do</h2>
 
-<div class="card">
-<h3>Discovery Strategy Support</h3>
-<p>We help organize and structure discovery work based on the matter materials, pleadings, known facts, case themes, and attorney direction.</p>
-<ul>
-<li>Requests for Admission support</li>
-<li>Requests for Production support</li>
-<li>Special interrogatory support</li>
-<li>Form interrogatory organization</li>
-<li>Discovery question development based on provided case materials</li>
-<li>Issue-based discovery mapping</li>
-<li>Discovery sequencing and tracking</li>
-</ul>
+<div class="card-grid">
+
+  <div class="image-card">
+    <img src="advisory-documents.png" alt="Organized legal documents and productions">
+    <div class="card-body">
+      <h3>Discovery Strategy Support</h3>
+      <p>We help organize and structure discovery work based on the matter materials, pleadings, known facts, case themes, and attorney direction.</p>
+      <ul>
+        <li>Requests for Admission support</li>
+        <li>Requests for Production support</li>
+        <li>Special interrogatory support</li>
+        <li>Form interrogatory organization</li>
+        <li>Issue-based discovery mapping</li>
+        <li>Discovery sequencing and tracking</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="image-card">
+    <img src="advisory-evidence.png" alt="Evidence organization and records review workspace">
+    <div class="card-body">
+      <h3>Discovery Response Support</h3>
+      <p>We help convert client-provided information into clear, organized, professionally structured response drafts for attorney review.</p>
+      <ul>
+        <li>Response organization</li>
+        <li>Draft response formatting</li>
+        <li>Objection framework support for attorney review</li>
+        <li>Fact integration from client-provided answers</li>
+        <li>Consistency review across responses</li>
+        <li>Supporting document identification</li>
+      </ul>
+      <p class="note">All legal objections, final positions, and response approvals must be reviewed and approved by licensed counsel where applicable.</p>
+    </div>
+  </div>
+
+  <div class="image-card">
+    <img src="advisory-meet-confer.png" alt="Conference room prepared for meet and confer work">
+    <div class="card-body">
+      <h3>Meet-and-Confer Support</h3>
+      <p>We help analyze discovery disputes and organize meet-and-confer correspondence so issues are clear, documented, and professionally presented.</p>
+      <ul>
+        <li>Issue summaries</li>
+        <li>Deficiency tracking</li>
+        <li>Response comparison charts</li>
+        <li>Meet-and-confer letter drafting support</li>
+        <li>Supplemental response tracking</li>
+        <li>Exhibit and attachment organization</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="image-card">
+    <img src="advisory-timeline.png" alt="Chronology and case timeline workspace">
+    <div class="card-body">
+      <h3>Chronologies, Evidence & Records Organization</h3>
+      <p>We help transform scattered records into usable timelines, issue lists, and organized evidence sets.</p>
+      <ul>
+        <li>Medical record chronology</li>
+        <li>Event timeline development</li>
+        <li>Document indexing</li>
+        <li>Production review support</li>
+        <li>Evidence binders</li>
+        <li>Key document summaries</li>
+        <li>Witness/event cross-references</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="image-card">
+    <img src="advisory-deposition.png" alt="Deposition preparation materials">
+    <div class="card-body">
+      <h3>Deposition Support</h3>
+      <p>We support deposition preparation through organization, exhibits, timelines, summaries, and materials management.</p>
+      <ul>
+        <li>Deposition exhibit organization</li>
+        <li>Witness timeline summaries</li>
+        <li>Question-topic organization based on attorney direction</li>
+        <li>Record packets</li>
+        <li>Prior testimony summary support</li>
+        <li>Issue tracking before and after deposition</li>
+      </ul>
+      <p class="note">Lantern Advisory does not provide legal strategy or questioning advice. Deposition strategy remains with licensed counsel.</p>
+    </div>
+  </div>
+
+  <div class="image-card">
+    <img src="advisory-trial.png" alt="Trial and hearing support materials">
+    <div class="card-body">
+      <h3>Trial & Hearing Support</h3>
+      <p>We assist with organization and preparation of matter materials for hearings, mediation, settlement conferences, and trial support.</p>
+      <ul>
+        <li>Exhibit organization</li>
+        <li>Timeline refinement</li>
+        <li>Document lists</li>
+        <li>Witness material organization</li>
+        <li>Hearing binder support</li>
+        <li>Trial exhibit coordination</li>
+        <li>Issue summary packets</li>
+      </ul>
+    </div>
+  </div>
+
 </div>
 
-<div class="card">
-<h3>Discovery Response Support</h3>
-<p>We help convert client-provided information into clear, organized, professionally structured response drafts for attorney review.</p>
-<ul>
-<li>Response organization</li>
-<li>Draft response formatting</li>
-<li>Objection framework support for attorney review</li>
-<li>Fact integration from client-provided answers</li>
-<li>Consistency review across responses</li>
-<li>Cross-reference review</li>
-<li>Supporting document identification</li>
-</ul>
-<p class="note">All legal objections, final positions, and response approvals must be reviewed and approved by licensed counsel where applicable.</p>
+</div>
+</section>
+
+<section>
+<div class="content">
+
+<div class="split">
+  <img src="advisory-library.png" alt="Legal research library workspace">
+
+  <div>
+    <h2>Engagement Options</h2>
+
+    <div class="card">
+      <h3>Discovery Project</h3>
+      <p>For focused discovery needs such as RFAs, RFPs, interrogatories, responses, or meet-and-confer support.</p>
+    </div>
+
+    <div class="card">
+      <h3>Discovery Audit</h3>
+      <p>For matters where discovery has already been served or received and the team needs help identifying gaps, risks, inconsistencies, and opportunities for better organization.</p>
+    </div>
+
+    <div class="card">
+      <h3>Litigation Support Retainer</h3>
+      <p>For ongoing matters requiring recurring discovery support, chronology updates, evidence organization, drafting assistance, and matter management support.</p>
+    </div>
+
+    <div class="card">
+      <h3>Deposition or Trial Readiness Support</h3>
+      <p>For attorneys and teams preparing for depositions, hearings, settlement conferences, mediation, or trial support.</p>
+    </div>
+  </div>
 </div>
 
-<div class="card">
-<h3>Meet-and-Confer Support</h3>
-<p>We help analyze discovery disputes and organize meet-and-confer correspondence so issues are clear, documented, and professionally presented.</p>
-<ul>
-<li>Issue summaries</li>
-<li>Deficiency tracking</li>
-<li>Response comparison charts</li>
-<li>Meet-and-confer letter drafting support</li>
-<li>Supplemental response tracking</li>
-<li>Exhibit and attachment organization</li>
-</ul>
 </div>
+</section>
 
-<div class="card">
-<h3>Chronologies, Evidence & Records Organization</h3>
-<p>We help transform scattered records into usable timelines, issue lists, and organized evidence sets.</p>
-<ul>
-<li>Medical record chronology</li>
-<li>Event timeline development</li>
-<li>Document indexing</li>
-<li>Production review support</li>
-<li>Evidence binders</li>
-<li>Key document summaries</li>
-<li>Witness/event cross-references</li>
-</ul>
-</div>
-
-<div class="card">
-<h3>Deposition Support</h3>
-<p>We support deposition preparation through organization, exhibits, timelines, summaries, and materials management.</p>
-<ul>
-<li>Deposition exhibit organization</li>
-<li>Witness timeline summaries</li>
-<li>Question-topic organization based on attorney direction</li>
-<li>Record packets</li>
-<li>Prior testimony summary support</li>
-<li>Issue tracking before and after deposition</li>
-</ul>
-<p class="note">Lantern Advisory does not provide legal strategy or questioning advice. Deposition strategy remains with licensed counsel.</p>
-</div>
-
-<div class="card">
-<h3>Trial & Hearing Support</h3>
-<p>We assist with organization and preparation of matter materials for hearings, mediation, settlement conferences, and trial support.</p>
-<ul>
-<li>Exhibit organization</li>
-<li>Timeline refinement</li>
-<li>Document lists</li>
-<li>Witness material organization</li>
-<li>Hearing binder support</li>
-<li>Trial exhibit coordination</li>
-<li>Issue summary packets</li>
-</ul>
-</div>
-
-<h2>Engagement Options</h2>
-
-<div class="card">
-<h3>Discovery Project</h3>
-<p>For focused discovery needs such as RFAs, RFPs, interrogatories, responses, or meet-and-confer support.</p>
-</div>
-
-<div class="card">
-<h3>Discovery Audit</h3>
-<p>For matters where discovery has already been served or received and the team needs help identifying gaps, risks, inconsistencies, and opportunities for better organization.</p>
-</div>
-
-<div class="card">
-<h3>Litigation Support Retainer</h3>
-<p>For ongoing matters requiring recurring discovery support, chronology updates, evidence organization, drafting assistance, and matter management support.</p>
-</div>
-
-<div class="card">
-<h3>Deposition or Trial Readiness Support</h3>
-<p>For attorneys and teams preparing for depositions, hearings, settlement conferences, mediation, or trial support.</p>
-</div>
+<section class="band">
+<div class="content">
 
 <h2>Get in Touch</h2>
 
