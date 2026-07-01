@@ -171,6 +171,23 @@ h2{
 
 .card{
   min-height:340px;
+  overflow:hidden;
+}
+
+.card.with-image{
+  padding:0;
+}
+
+.card.with-image img{
+  width:100%;
+  height:190px;
+  object-fit:cover;
+  display:block;
+  border-bottom:1px solid rgba(217,164,65,.22);
+}
+
+.card-inner{
+  padding:26px;
 }
 
 .card h3,.contact-box h3{
@@ -199,6 +216,40 @@ h2{
   letter-spacing:1px;
 }
 
+.editorial-split{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:0;
+  padding:0;
+  background:#070201;
+  border-top:1px solid rgba(217,164,65,.18);
+  border-bottom:1px solid rgba(217,164,65,.18);
+}
+
+.editorial-text{
+  padding:78px 7vw;
+  background:linear-gradient(180deg,#180602,#0b0201);
+}
+
+.editorial-text h2{
+  text-align:left;
+}
+
+.editorial-text .content{
+  max-width:none;
+}
+
+.editorial-image{
+  min-height:560px;
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+}
+
+.overview-image{background-image:url("home-overview.png");}
+.about-image{background-image:url("home-about.png");}
+.process-image{background-image:url("home-process.png");}
+
 footer{
   text-align:center;
   padding:55px 7vw;
@@ -222,6 +273,9 @@ footer{
   nav a{display:inline-block;margin:8px 10px}
   .hero{text-align:center;background-position:center}
   .hero-text{margin:auto}
+  .editorial-split{grid-template-columns:1fr}
+  .editorial-text h2{text-align:center}
+  .editorial-image{min-height:360px}
 }
 </style>
 </head>
@@ -239,9 +293,9 @@ footer{
     <a href="threadline.html" target="_blank">Threadline</a>
     <a href="working-with-lantern.html" target="_blank">Process</a>
     <a href="pricing-models.html" target="_blank">Pricing</a>
-<a href="intake.html" target="_blank">Intake</a>
-<a href="faq.html" target="_blank">FAQ</a>
-<a href="#contact">Contact</a>
+    <a href="intake.html" target="_blank">Intake</a>
+    <a href="faq.html" target="_blank">FAQ</a>
+    <a href="#contact">Contact</a>
   </nav>
 </header>
 
@@ -278,210 +332,224 @@ footer{
   </div>
 </section>
 
-<section id="overview">
-  <h2>Company Overview</h2>
-  <div class="content">
-    <p>Lantern Enterprises is a strategic intelligence and operational support enterprise providing advisory services, executive technology solutions, storytelling and communications support, production services, and AI-driven workflow systems.</p>
-    <p>The company was founded on a simple but increasingly urgent modern reality: people and organizations are overwhelmed by fragmented information, disconnected systems, operational complexity, and communication overload.</p>
-    <p>Lantern Enterprises helps clients solve those problems by combining human-centered consulting, operational expertise, technology systems, research and discovery support, narrative and communication strategy, and intelligent retrieval and workflow tools.</p>
+<section class="editorial-split" id="overview">
+  <div class="editorial-text">
+    <h2>Company Overview</h2>
+    <div class="content">
+      <p>Lantern Enterprises is a strategic intelligence and operational support enterprise providing advisory services, executive technology solutions, storytelling and communications support, production services, and AI-driven workflow systems.</p>
+      <p>The company was founded on a simple but increasingly urgent modern reality: people and organizations are overwhelmed by fragmented information, disconnected systems, operational complexity, and communication overload.</p>
+      <p>Lantern Enterprises helps clients solve those problems by combining human-centered consulting, operational expertise, technology systems, research and discovery support, narrative and communication strategy, and intelligent retrieval and workflow tools.</p>
+    </div>
   </div>
+  <div class="editorial-image overview-image"></div>
 </section>
 
-<section id="about">
-  <h2>Who We Are</h2>
-  <div class="content">
-    <p>Lantern Enterprises was built for the places where information, technology, story, and responsibility intersect.</p>
-    <p>
-Our founding leadership brings together experience in journalism,
-filmmaking, enterprise communications, executive technology,
-litigation support, research, production, and complex information
-management.
-      
-
-The result is an organization designed to help clients
-organize what matters, communicate with purpose, preserve
-institutional knowledge, and operate with greater clarity.
-</p>
+<section class="editorial-split" id="about">
+  <div class="editorial-image about-image"></div>
+  <div class="editorial-text">
+    <h2>Who We Are</h2>
+    <div class="content">
+      <p>Lantern Enterprises was built for the places where information, technology, story, and responsibility intersect.</p>
+      <p>
+        Our founding leadership brings together experience in journalism,
+        filmmaking, enterprise communications, executive technology,
+        litigation support, research, production, and complex information
+        management.
+      </p>
+      <p>
+        The result is an organization designed to help clients
+        organize what matters, communicate with purpose, preserve
+        institutional knowledge, and operate with greater clarity.
+      </p>
+    </div>
+    <div class="about-callout">
+      Lantern Enterprises is supported by a growing network of experienced collaborators including litigation professionals, research specialists, technology practitioners, production professionals, writers, and strategic advisors.
+      <br><br>
+      Together, these disciplines allow Lantern Enterprises to support clients across legal, operational, technological, communications, research, and information-intensive environments.
+    </div>
   </div>
- <div class="about-callout">
-  Lantern Enterprises is supported by a growing network of experienced collaborators including litigation professionals, research specialists, technology practitioners, production professionals, writers, and strategic advisors.
-
-  Together, these disciplines allow Lantern Enterprises to support clients across legal, operational, technological, communications, research, and information-intensive environments.
-</div>
 </section>
 
 <section id="services">
   <h2>Our Services</h2>
 
   <div class="services">
-    <a class="card" href="lantern-advisory.html" target="_blank">
-      <h3>Lantern Advisory</h3>
-      <p>Strategic litigation support, discovery consulting, organizational analysis, and information structuring for legal professionals, organizations, consultants, and complex matters.</p>
-      <p class="note">Lantern Advisory is not a law firm and does not provide legal representation.</p>
-      <span class="learn">Learn More →</span>
+    <a class="card with-image" href="lantern-advisory.html" target="_blank">
+      <img src="home-advisory.png" alt="Strategic advisory workspace">
+      <div class="card-inner">
+        <h3>Lantern Advisory</h3>
+        <p>Strategic litigation support, discovery consulting, organizational analysis, and information structuring for legal professionals, organizations, consultants, and complex matters.</p>
+        <p class="note">Lantern Advisory is not a law firm and does not provide legal representation.</p>
+        <span class="learn">Learn More →</span>
+      </div>
     </a>
 
-    <a class="card" href="lantern-systems.html" target="_blank">
-      <h3>Lantern Systems</h3>
-      <p>White-glove technology support, workflow optimization, operational intelligence, and AI integration for executives, family offices, professionals, and organizations.</p>
-      <span class="learn">Learn More →</span>
-    </a>
-<a class="card" href="lantern-research.html" target="_blank">
-
-<h3>Lantern Research</h3>
-
-<p>
-Research, analysis, intelligence, and synthesis services
-for organizations, professionals, legal teams, consultants,
-and information-heavy environments.
-</p>
-
-<p>
-Research briefs, chronologies, due diligence support,
-records review, executive intelligence, market research,
-and information synthesis.
-</p>
-
-<span class="learn">
-Learn More →
-</span>
-
-</a>
-    <a class="card" href="freedom-studio.html" target="_blank">
-      <h3>Freedom Studio</h3>
-      <p>A storytelling and creative practice devoted to clarity, dignity, and meaningful expression.</p>
-      <p>Writing, voice, ghostwriting, thought leadership, and story-to-video development.</p>
-      <span class="learn">Learn More →</span>
+    <a class="card with-image" href="lantern-systems.html" target="_blank">
+      <img src="home-systems.png" alt="Executive technology workspace">
+      <div class="card-inner">
+        <h3>Lantern Systems</h3>
+        <p>White-glove technology support, workflow optimization, operational intelligence, and AI integration for executives, family offices, professionals, and organizations.</p>
+        <span class="learn">Learn More →</span>
+      </div>
     </a>
 
-    <a class="card" href="freedom-productions.html" target="_blank">
-      <h3>Freedom Productions</h3>
-      <p>Corporate events, town halls, civic/community productions, livestream support, founder videos, brand storytelling videos, deposition support, and production coordination.</p>
-      <span class="learn">Learn More →</span>
+    <a class="card with-image" href="lantern-research.html" target="_blank">
+      <img src="home-research.png" alt="Research and analysis desk">
+      <div class="card-inner">
+        <h3>Lantern Research</h3>
+        <p>Research, analysis, intelligence, and synthesis services for organizations, professionals, legal teams, consultants, and information-heavy environments.</p>
+        <p>Research briefs, chronologies, due diligence support, records review, executive intelligence, market research, and information synthesis.</p>
+        <span class="learn">Learn More →</span>
+      </div>
     </a>
 
-    <a class="card" href="threadline.html" target="_blank">
-      <h3>Threadline Intelligence™</h3>
-      <p>AI-powered retrieval, indexing, and operational intelligence to help people and organizations organize, search, understand, and act on fragmented information.</p>
-      <span class="learn">Learn More →</span>
+    <a class="card with-image" href="freedom-studio.html" target="_blank">
+      <img src="freedom-studio-hero.jpg" alt="Freedom Studio writing and voice workspace">
+      <div class="card-inner">
+        <h3>Freedom Studio</h3>
+        <p>A storytelling and creative practice devoted to clarity, dignity, and meaningful expression.</p>
+        <p>Writing, voice, ghostwriting, thought leadership, and story-to-video development.</p>
+        <span class="learn">Learn More →</span>
+      </div>
+    </a>
+
+    <a class="card with-image" href="freedom-productions.html" target="_blank">
+      <img src="PRODUCTION-HERO.png" alt="Freedom Productions studio and control room">
+      <div class="card-inner">
+        <h3>Freedom Productions</h3>
+        <p>Corporate events, town halls, civic/community productions, livestream support, founder videos, brand storytelling videos, deposition support, and production coordination.</p>
+        <span class="learn">Learn More →</span>
+      </div>
+    </a>
+
+    <a class="card with-image" href="threadline.html" target="_blank">
+      <img src="home-threadline.png" alt="Threadline intelligence and connected workflow">
+      <div class="card-inner">
+        <h3>Threadline Intelligence™</h3>
+        <p>AI-powered retrieval, indexing, and operational intelligence to help people and organizations organize, search, understand, and act on fragmented information.</p>
+        <span class="learn">Learn More →</span>
+      </div>
     </a>
   </div>
 </section>
-  <section>
 
-<h2>How We Engage</h2>
-
-<div class="services">
-
-<a class="card" href="engagement-models.html" target="_blank">
-<h3>Project Engagements</h3>
-<p>
-Defined scope, defined deliverables,
-defined timelines.
-</p>
-<span class="learn">Learn More →</span>
-</a>
-
-<a class="card" href="engagement-models.html" target="_blank">
-<h3>Retainer Relationships</h3>
-<p>
-Ongoing support for organizations,
-professionals, legal teams, and executives.
-</p>
-<span class="learn">Learn More →</span>
-</a>
-
-<a class="card" href="engagement-models.html" target="_blank">
-<h3>Fractional Support</h3>
-<p>
-Access to experienced support and strategic
-guidance without full-time staffing costs.
-</p>
-<span class="learn">Learn More →</span>
-</a>
-
-<a class="card" href="engagement-models.html" target="_blank">
-<h3>Enterprise Solutions</h3>
-<p>
-Custom support models for organizations,
-family offices, legal teams, and complex
-operational environments.
-</p>
-<span class="learn">Learn More →</span>
-</a>
-
-</div>
-  
-</section>
 <section>
+  <h2>How We Engage</h2>
 
-<h2>Working With Lantern</h2>
+  <div class="services">
 
-<div class="content">
-<p>
-Every engagement begins with clarity. Before work begins, we identify the need, define the right scope, determine the appropriate division or combination of divisions, and establish expectations around deliverables, timeline, access, confidentiality, and communication.
-</p>
-</div>
+    <a class="card" href="engagement-models.html" target="_blank">
+      <h3>Project Engagements</h3>
+      <p>
+        Defined scope, defined deliverables,
+        defined timelines.
+      </p>
+      <span class="learn">Learn More →</span>
+    </a>
 
-<div class="services">
+    <a class="card" href="engagement-models.html" target="_blank">
+      <h3>Retainer Relationships</h3>
+      <p>
+        Ongoing support for organizations,
+        professionals, legal teams, and executives.
+      </p>
+      <span class="learn">Learn More →</span>
+    </a>
 
-<a class="card" href="working-with-lantern.html" target="_blank">
-<h3>Our Process</h3>
-<p>
-Learn how Lantern moves from initial conversation to assessment, proposal, onboarding, execution, and delivery.
-</p>
-<span class="learn">Learn More →</span>
-</a>
+    <a class="card" href="engagement-models.html" target="_blank">
+      <h3>Fractional Support</h3>
+      <p>
+        Access to experienced support and strategic
+        guidance without full-time staffing costs.
+      </p>
+      <span class="learn">Learn More →</span>
+    </a>
 
-<a class="card" href="pricing-models.html" target="_blank">
-<h3>Pricing Models</h3>
-<p>
-Review preliminary pricing frameworks for projects, retainers, fractional support, enterprise solutions, and custom engagements.
-</p>
-<span class="learn">View Pricing →</span>
-</a>
+    <a class="card" href="engagement-models.html" target="_blank">
+      <h3>Enterprise Solutions</h3>
+      <p>
+        Custom support models for organizations,
+        family offices, legal teams, and complex
+        operational environments.
+      </p>
+      <span class="learn">Learn More →</span>
+    </a>
 
-<a class="card" href="faq.html" target="_blank">
-<h3>FAQ</h3>
-<p>
-Review common questions about Lantern Enterprises, our divisions, boundaries, engagement models, and how we work.
-</p>
-<span class="learn">Read FAQ →</span>
-</a>
-<a class="card" href="intake.html" target="_blank">
-<h3>Client Intake</h3>
-<p>
-Start with the intake pathway that best fits your need so Lantern can understand scope, urgency, deliverables, and the right service division.
-</p>
-<span class="learn">Start Intake →</span>
-</a>
-</div>
-
+  </div>
 </section>
-  
+
+<section class="editorial-split">
+  <div class="editorial-text">
+    <h2>Working With Lantern</h2>
+    <div class="content">
+      <p>
+        Every engagement begins with clarity. Before work begins, we identify the need, define the right scope, determine the appropriate division or combination of divisions, and establish expectations around deliverables, timeline, access, confidentiality, and communication.
+      </p>
+    </div>
+
+    <div class="services">
+
+      <a class="card" href="working-with-lantern.html" target="_blank">
+        <h3>Our Process</h3>
+        <p>
+          Learn how Lantern moves from initial conversation to assessment, proposal, onboarding, execution, and delivery.
+        </p>
+        <span class="learn">Learn More →</span>
+      </a>
+
+      <a class="card" href="pricing-models.html" target="_blank">
+        <h3>Pricing Models</h3>
+        <p>
+          Review preliminary pricing frameworks for projects, retainers, fractional support, enterprise solutions, and custom engagements.
+        </p>
+        <span class="learn">View Pricing →</span>
+      </a>
+
+      <a class="card" href="faq.html" target="_blank">
+        <h3>FAQ</h3>
+        <p>
+          Review common questions about Lantern Enterprises, our divisions, boundaries, engagement models, and how we work.
+        </p>
+        <span class="learn">Read FAQ →</span>
+      </a>
+
+      <a class="card" href="intake.html" target="_blank">
+        <h3>Client Intake</h3>
+        <p>
+          Start with the intake pathway that best fits your need so Lantern can understand scope, urgency, deliverables, and the right service division.
+        </p>
+        <span class="learn">Start Intake →</span>
+      </a>
+
+    </div>
+  </div>
+
+  <div class="editorial-image process-image"></div>
+</section>
+
 <section id="contact">
   <h2>Contact</h2>
-<div style="text-align:center;margin-bottom:40px;">
+  <div style="text-align:center;margin-bottom:40px;">
 
-<p style="font-size:24px;color:#D9A441;">
-Call or Text
-</p>
+    <p style="font-size:24px;color:#D9A441;">
+      Call or Text
+    </p>
 
-<p style="font-size:28px;font-weight:bold;">
-<a href="tel:19094519502"
-style="color:#F0D6A2;text-decoration:none;">
-(909) 451-9502
-</a>
-</p>
+    <p style="font-size:28px;font-weight:bold;">
+      <a href="tel:19094519502"
+      style="color:#F0D6A2;text-decoration:none;">
+      (909) 451-9502
+      </a>
+    </p>
 
-<p>
-<a href="mailto:lanternenterprisesinfo@gmail.com"
-style="color:#D9A441;">
-lanternenterprisesinfo@gmail.com
-</a>
-</p>
+    <p>
+      <a href="mailto:lanternenterprisesinfo@gmail.com"
+      style="color:#D9A441;">
+      lanternenterprisesinfo@gmail.com
+      </a>
+    </p>
 
-</div>
+  </div>
   <div class="contact-grid">
     <a class="contact-box" href="mailto:lanternenterpriseslegal@gmail.com?subject=Discovery%20Call%20Request">
       <h3>Discovery Call</h3>
